@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Weight Tracker</title>
+        <link rel="stylesheet" href="style.css"> 
+    </head>
+    <body> 
+        <div>
+            <h1>Weight tracker</h1>
+            <div class="addWeight">
+                <img src="img/images.png">
+                <h2>Добавление веса</h2>
+                <form id ='form_add_weight'>
+                    <p>Значение:
+                        <input class="wightValue" type="number" step="any" required>
+                    </p>
+                    <p>Дата
+                        <input class = "dateValue"type="date" required>
+                    </p>
+                    <p>Пользователь:
+                        <input class="userValue" type="text" required>
+                    </p>
+                        <input id="submit" type="submit" value="Занести">
+                </form>
+            </div>
+            <div class="history">
+                <img src="img/list.png">
+                <h2>История записей</h2>
+                <form id="SortingForm">
+                  <p>Сортировка по дате
+                      <select id="sort">
+                          <option value="min">По убыванию</option>
+                          <option value="max">По возрастанию</option>
+                      </select>
+                  </p>
+                  <p>Фильтрация по имени
+                      <p>Имя пользователя:
+                        <input class="userName" type="text">
+                    </p>
+                  </p>
+                  <input id="submit" type="submit" value="Показать">
+                </form>
+            </div>
+            <div class="list"> 
+                <ul></ul>
+            </div>
+            <div class="diagram">
+                <canvas id="canvas"> </canvas>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
